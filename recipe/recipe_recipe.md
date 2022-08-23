@@ -200,30 +200,35 @@ These examples will later be encoded as RSpec tests.
 # 1
 # Get all recipes
 
-repo = recipeRepository.new
+repo = RecipeRepository.new
 
 recipes = repo.all
 
 recipes.length # =>  2
 
-recipes[0].id # =>  1
-recipes[0].name # =>  'David'
-recipes[0].cohort_name # =>  'April 2022'
+recipes[0].id # =>  1 < string? integer?
+recipes[0].name # =>  'Baked potato test'
+recipes[0].average_cooking_time # =>  '60'
+recipes[0].rating # =>  '4' does it always return a string?
 
-recipes[1].id # =>  2
-recipes[1].name # =>  'Anna'
-recipes[1].cohort_name # =>  'May 2022'
+recipes[1].id # =>  1 < string? integer?
+recipes[1].name # =>  'Pasta test'
+recipes[1].average_cooking_time # =>  '25'
+recipes[1].rating # =>  '3' does it always return a string?
 
 # 2
 # Get a single recipe
 
-repo = recipeRepository.new
+repo = RecipeRepository.new
 
 recipe = repo.find(1)
 
 recipe.id # =>  1
-recipe.name # =>  'David'
-recipe.cohort_name # =>  'April 2022'
+recipe.name # =>  'Baked potato test'
+recipe.average_cooking_time # =>  '60'
+recipe.rating # => '4'
+
+
 
 # Add more examples for each method
 ```
